@@ -9,8 +9,10 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
+import { createHtmlPlugin } from 'vite-plugin-html'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueDevTools from 'vite-plugin-vue-devtools'
+import { version } from './package.json'
 import 'vitest/config'
 
 export default defineConfig({
@@ -107,6 +109,26 @@ export default defineConfig({
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
+
+    // 修改index.html
+    createHtmlPlugin({
+      minify: true,
+      inject: {
+        data: {
+          title: '元始引擎',
+        },
+        tags: [
+          {
+            injectTo: 'head',
+            tag: 'meta',
+            attrs: {
+              name: 'version',
+              content: version, // 通过ci/cd 传入 测试环境通过传入hash 生产直接通过package.json 获取
+            },
+          },
+        ],
+      },
+    }),
   ],
 
   // https://github.com/vitest-dev/vitest
