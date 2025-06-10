@@ -9,5 +9,6 @@ const { t } = useI18n()
   <section>
     <div>Base</div>
     <div>{{ t('not-found') }}</div>
+    <span>你好g搭建</span> <span>你好g搭建</span>
   </section>
 </template>

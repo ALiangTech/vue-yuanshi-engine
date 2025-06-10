@@ -16,6 +16,7 @@ import { version } from './package.json'
 import 'vitest/config'
 
 export default defineConfig({
+  envDir: './config/env',
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -30,7 +31,6 @@ export default defineConfig({
         }),
       },
     }),
-
     // https://github.com/posva/unplugin-vue-router
     VueRouter({
       extensions: ['.vue', '.md'],
@@ -57,7 +57,6 @@ export default defineConfig({
       ],
       vueTemplate: true,
     }),
-
     // https://github.com/antfu/unplugin-vue-components
     Components({
       // allow auto load markdown components under `./src/components/`
@@ -66,7 +65,6 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
     }),
-
     // https://github.com/antfu/unocss
     // see uno.config.ts for config
     Unocss(),
@@ -98,7 +96,6 @@ export default defineConfig({
         ],
       },
     }),
-
     // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
     VueI18n({
       runtimeOnly: true,
@@ -106,10 +103,8 @@ export default defineConfig({
       fullInstall: true,
       include: [path.resolve(__dirname, 'locales/**')],
     }),
-
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
-
     // 修改index.html
     createHtmlPlugin({
       minify: true,
