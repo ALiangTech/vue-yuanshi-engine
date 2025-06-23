@@ -13,8 +13,7 @@
     "test:e2e": "cypress open",
     "typecheck": "vue-tsc --noEmit",
     "up": "taze major -I",
-    "postinstall": "npx simple-git-hooks",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
     "@unhead/vue": "catalog:frontend",
@@ -47,6 +46,7 @@
     "lint-staged": "catalog:dev",
     "markdown-it-link-attributes": "catalog:build",
     "rollup": "catalog:build",
+    "rollup-plugin-visualizer": "catalog:build",
     "shiki": "catalog:build",
     "simple-git-hooks": "catalog:dev",
     "taze": "catalog:dev",
@@ -58,7 +58,7 @@
     "unplugin-vue-markdown": "catalog:build",
     "unplugin-vue-router": "catalog:build",
     "vite": "catalog:build",
-    "vite-bundle-visualizer": "catalog:build",
+    "vite-plugin-compression2": "catalog:build",
     "vite-plugin-html": "catalog:build",
     "vite-plugin-inspect": "catalog:build",
     "vite-plugin-pwa": "catalog:build",
