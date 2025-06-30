@@ -24,11 +24,9 @@ fork 自 https://github.com/antfu-collective/vitesse
 
 - 📥 [API 自动加载](https://github.com/unplugin/unplugin-auto-import) - 直接使用 Composition API 无需引入
 
-- 🦔 使用 [beasties](https://github.com/danielroe/beasties) 的生成关键 CSS
-
 - 🦾 TypeScript, 当然
 
-- ⚙️ 结合 [GitHub Actions](https://github.com/features/actions)，使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试, [Cypress](https://cypress.io/) 进行 E2E 测试
+- ⚙️ 使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试, [Cypress](https://cypress.io/) 进行 E2E 测试
 
 <br>
 
@@ -56,7 +54,6 @@ fork 自 https://github.com/antfu-collective/vitesse
 - [Vue I18n](https://github.com/intlify/vue-i18n-next) - 国际化
   - [`unplugin-vue-i18n`](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - Vue I18n 的 Vite 插件
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
-- [`vite-ssg-sitemap`](https://github.com/jbaubree/vite-ssg-sitemap) - 站点地图生成器
 - [`@vueuse/head`](https://github.com/vueuse/head) - 响应式地操作文档头信息
 - [`vite-plugin-vue-devtools`](https://github.com/webfansplz/vite-plugin-vue-devtools) - 旨在增强Vue开发者体验的Vite插件
 
@@ -106,7 +103,7 @@ pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 
 ### 开发
 
-只需要执行以下命令就可以在 http://localhost:3333 中看到
+只需要执行以下命令就可以在 http://localhost:5173 中看到
 
 ```bash
 pnpm dev
